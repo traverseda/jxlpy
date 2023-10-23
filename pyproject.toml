@@ -1,3 +1,24 @@
+[tool.poetry]
+name = "jxlpy"
+version = "1.0.0"
+description = "Cython bindings and Pillow plugin for JPEG XL"
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.build]
+generate-setup-file = false
+script = "build.py"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+cython = "^3.0.4"
+
+
+[tool.poetry.group.dev.dependencies]
+cython = "^3.0.4"
+
 [build-system]
-requires = ["setuptools", "wheel", "Cython"]
-build-backend = "setuptools.build_meta"
+requires = ["poetry-core","cython"]
+
+build-backend = "poetry.core.masonry.api"
